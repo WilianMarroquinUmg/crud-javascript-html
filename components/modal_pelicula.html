@@ -1,0 +1,53 @@
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Editar Película</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm">
+                    <div class="mb-3">
+                        <label for="movieId" class="form-label">ID</label>
+                        <input type="text" class="form-control" id="movieId" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="movieTitle" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="movieTitle">
+                    </div>
+                    <div class="mb-3">
+                        <label for="movieYear" class="form-label">Año</label>
+                        <input type="text" class="form-control" id="movieYear">
+                    </div>
+                    <div class="mb-3">
+                        <label for="movieType" class="form-label">Tipo</label>
+                        <input type="text" class="form-control" id="movieType">
+                    </div>
+                    <div class="mb-3">
+                        <label for="moviePoster" class="form-label">Poster (URL)</label>
+                        <input type="text" class="form-control" id="moviePoster">
+                    </div>
+                    <div class="mb-3">
+                        <label for="movieEstado" class="form-label">Estado</label>
+                        <select class="form-control" id="movieEstado">
+                            <option value="true">Activo</option>
+                            <option value="false">Inactivo</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="movieDescription" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="movieDescription"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="movieUbication" class="form-label">Ubicación</label>
+                        <input type="text" class="form-control" id="movieUbication">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="saveChanges" onclick="ActualizarPelicula()">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
