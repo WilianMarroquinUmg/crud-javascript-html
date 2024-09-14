@@ -74,9 +74,13 @@ function renderTable() {
 
 
         const actionsCell = document.createElement("td");
+        actionsCell.style.width = "150px";
 
         const vizualizarButton = document.createElement("button");
-        vizualizarButton.textContent = "Vizualizar";
+
+        const icon = document.createElement("i");
+        icon.className = "fas fa-eye";
+        vizualizarButton.appendChild(icon);
         vizualizarButton.className = "btn btn-info btn-sm me-2";
         vizualizarButton.onclick = () => {
             vizualizarPelicula(pelicula.imdbID);
@@ -85,15 +89,22 @@ function renderTable() {
 
 
         const editButton = document.createElement("button");
-        editButton.textContent = "Editar";
-        editButton.className = "btn btn-primary btn-sm me-2";
+
+        const iconEdit = document.createElement("i");
+        iconEdit.className = "fas fa-edit";
+        editButton.appendChild(iconEdit);
+        editButton.className = "btn btn-warning btn-sm me-2";
         editButton.onclick = () => {
             levanterModalActualizarPelicula(pelicula);
         };
         actionsCell.appendChild(editButton);
 
         const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Eliminar";
+
+        const iconDelete = document.createElement("i");
+        iconDelete.className = "fas fa-trash";
+        deleteButton.appendChild(iconDelete);
+
         deleteButton.className = "btn btn-danger btn-sm";
         deleteButton.onclick = () => {
             eliminarPelicula(pelicula.imdbID);
