@@ -1,6 +1,6 @@
-
+let data = [];
 function getPeliculas() {
-    data.splice(0, data.length);
+
     fetch("https://movie.azurewebsites.net/api/cartelera?title=&ubication=")
         .then(response => response.json())
         .then(peliculas => {
@@ -20,7 +20,10 @@ function getPeliculas() {
 }
 
 function renderTable() {
-    // Limpiamos la tabla antes de agregar los datos
+
+    const tableBody = document.querySelector("#table tbody");
+
+    // Limpiar el tbody antes de renderizar
     tableBody.innerHTML = "";
 
     // Iteramos sobre los datos para crear filas en la tabla
@@ -56,16 +59,16 @@ function renderTable() {
         deleteButton.textContent = "Eliminar";
         deleteButton.className = "btn btn-danger btn-sm";
         deleteButton.onclick = () => {
-
             eliminarPelicula(pelicula.imdbID);
-
         };
         actionsCell.appendChild(deleteButton);
 
         row.appendChild(actionsCell);
 
-        // Añadimos la fila a la tabla
+        // Añadimos la fila al tbody de la tabla
         tableBody.appendChild(row);
     });
 
 }
+
+getPeliculas();
