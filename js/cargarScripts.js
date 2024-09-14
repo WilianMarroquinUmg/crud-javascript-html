@@ -13,6 +13,7 @@ let scripts = [
     '../js/modal.js',
     '../js/obtenerPeliculas.js',
     '../js/vizualizarPelicula.js',
+    '../js/alertsSweetAlert.js',
     ]
 
 scripts.forEach(script => {

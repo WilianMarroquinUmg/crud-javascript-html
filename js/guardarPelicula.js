@@ -43,10 +43,10 @@ function guardarPelicula() {
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data)
-            alert(data.message)
 
             cerrarModal()
+
+            alertPerzonalizado('success', 'Pelicula Guardada Correctamente')
 
             getPeliculas();
 

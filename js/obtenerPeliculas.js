@@ -1,6 +1,8 @@
 let data = [];
 function getPeliculas() {
 
+    data = [];
+
     fetch("https://movie.azurewebsites.net/api/cartelera?title=&ubication=")
         .then(response => response.json())
         .then(peliculas => {
