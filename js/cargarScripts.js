@@ -5,16 +5,26 @@ function loadScript(url) {
     document.body.appendChild(script);
 }
 
+// let scripts = [
+//     '../js/actualizarPelicula.js',
+//     '../js/cargarComponents.js',
+//     '../js/eliminarPelicula.js',
+//     '../js/guardarPelicula.js',
+//     '../js/modal.js',
+//     '../js/obtenerPeliculas.js',
+//     '../js/vizualizarPelicula.js',
+//     '../js/alertsSweetAlert.js',
+//     ]
 let scripts = [
-    '../js/actualizarPelicula.js',
-    '../js/cargarComponents.js',
-    '../js/eliminarPelicula.js',
-    '../js/guardarPelicula.js',
-    '../js/modal.js',
-    '../js/obtenerPeliculas.js',
-    '../js/vizualizarPelicula.js',
-    '../js/alertsSweetAlert.js',
-    ]
+    '/js/actualizarPelicula.js',
+    '/js/cargarComponents.js',
+    '/js/eliminarPelicula.js',
+    '/js/guardarPelicula.js',
+    '/js/modal.js',
+    '/js/obtenerPeliculas.js',
+    '/js/vizualizarPelicula.js',
+    '/js/alertsSweetAlert.js',
+]
 
 scripts.forEach(script => {
 
