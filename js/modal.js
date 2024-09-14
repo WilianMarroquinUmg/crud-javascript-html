@@ -1,4 +1,3 @@
-
 function abrirModal() {
     const modal = new bootstrap.Modal(document.getElementById('editModal'));
     modal.show();
@@ -12,9 +11,14 @@ function cerrarModal() {
 
     // Si no hay una instancia, la creamos
     if (!modal) {
+
+
         const newModal = new bootstrap.Modal(modalElement);
-            newModal.hide();
+        newModal.hide();
+
+
     } else {
+
         modal.hide();
     }
 }

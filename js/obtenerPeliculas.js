@@ -74,6 +74,16 @@ function renderTable() {
 
 
         const actionsCell = document.createElement("td");
+
+        const vizualizarButton = document.createElement("button");
+        vizualizarButton.textContent = "Vizualizar";
+        vizualizarButton.className = "btn btn-info btn-sm me-2";
+        vizualizarButton.onclick = () => {
+            vizualizarPelicula(pelicula.imdbID);
+        };
+        actionsCell.appendChild(vizualizarButton);
+
+
         const editButton = document.createElement("button");
         editButton.textContent = "Editar";
         editButton.className = "btn btn-primary btn-sm me-2";

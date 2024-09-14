@@ -12,7 +12,7 @@ function levanterModalActualizarPelicula(pelicula) {
 
     let id = document.getElementById('movieId');
     id.value = pelicula.imdbID;
-    id.setAttribute('readonly', true);
+    id.setAttribute('disabled', true);
 
     document.getElementById('movieTitle').value = pelicula.Title;
     document.getElementById('movieYear').value = pelicula.Year;

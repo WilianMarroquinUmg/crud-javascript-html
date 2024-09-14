@@ -2,6 +2,7 @@
 function leventarModalGuardar(){
 
     abrirModal()
+    document.getElementById('movieId').removeAttribute('disabled');
 
     const boton = document.getElementById('boton');
     boton.innerHTML = 'Guardar';
