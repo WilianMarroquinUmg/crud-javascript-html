@@ -9,9 +9,13 @@ function getPeliculas() {
             peliculas.forEach(pelicula => {
                 data.push({
                     imdbID: pelicula.imdbID,
-                    title: pelicula.title,
-                    year: pelicula.Year,
-                    description: pelicula.description
+                    Title: pelicula.Title,
+                    Year: pelicula.Year,
+                    Type: pelicula.Type,
+                    Poster: pelicula.Poster,
+                    description: pelicula.description,
+                    Ubication: pelicula.Ubication,
+                    Estado: pelicula.Estado,
                 });
             });
             renderTable(); // Renderizamos la tabla
@@ -30,7 +34,6 @@ function renderTable() {
 
     // Iteramos sobre los datos para crear filas en la tabla
     data.forEach(pelicula => {
-        console.log(pelicula)
         const row = document.createElement("tr");
 
         const idCell = document.createElement("td");
@@ -42,19 +45,40 @@ function renderTable() {
         row.appendChild(titleCell);
 
         const yearCell = document.createElement("td");
-        yearCell.textContent = pelicula.year;
+        yearCell.textContent = pelicula.Year;
         row.appendChild(yearCell);
+
+        const typeCell = document.createElement("td");
+        typeCell.textContent = pelicula.Type;
+        row.appendChild(typeCell);
+
+        const posterCell = document.createElement("td");
+        const posterImg = document.createElement("img");
+        posterImg.src = pelicula.Poster;
+        posterImg.style.width = "80px";
+
+        posterCell.appendChild(posterImg);
+        row.appendChild(posterCell);
 
         const descriptionCell = document.createElement("td");
         descriptionCell.textContent = pelicula.description;
         row.appendChild(descriptionCell);
+
+        const ubicationCell = document.createElement("td");
+        ubicationCell.textContent = pelicula.Ubication;
+        row.appendChild(ubicationCell);
+
+        const estadoCell = document.createElement("td");
+        estadoCell.textContent = pelicula.Estado;
+        row.appendChild(estadoCell);
+
 
         const actionsCell = document.createElement("td");
         const editButton = document.createElement("button");
         editButton.textContent = "Editar";
         editButton.className = "btn btn-primary btn-sm me-2";
         editButton.onclick = () => {
-            openEditModal(pelicula);
+            levanterModalActualizarPelicula(pelicula);
         };
         actionsCell.appendChild(editButton);
 

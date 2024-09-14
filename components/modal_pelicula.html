@@ -1,4 +1,4 @@
-<div class="modal show" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -6,50 +6,64 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="editForm">
-                    <div class="mb-3">
-                        <label for="movieId" class="form-label">ID</label>
-                        <input type="text" class="form-control" id="movieId">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="editForm">
+                            <div class="row">
+                                <!-- Columna izquierda -->
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="movieId" class="form-label">ID</label>
+                                        <input type="text" class="form-control" id="movieId">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="movieTitle" class="form-label">Título</label>
+                                        <input type="text" class="form-control" id="movieTitle">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="movieYear" class="form-label">Año</label>
+                                        <input type="number" class="form-control" id="movieYear">
+                                    </div>
+                                </div>
+                                <!-- Columna derecha -->
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="movieType" class="form-label">Tipo</label>
+                                        <input type="text" class="form-control" id="movieType">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="moviePoster" class="form-label">Poster (URL)</label>
+                                        <input type="text" class="form-control" id="moviePoster">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="movieEstado" class="form-label">Estado</label>
+                                        <select class="form-control" id="movieEstado">
+                                            <option value="1">Activo</option>
+                                            <option value="0">Inactivo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fila para los campos restantes que deben ocupar todo el ancho -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="movieDescription" class="form-label">Descripción</label>
+                                        <textarea class="form-control" id="movieDescription"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="movieUbication" class="form-label">Ubicación</label>
+                                        <input type="text" class="form-control" id="movieUbication">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="mb-3">
-                        <label for="movieTitle" class="form-label">Título</label>
-                        <input type="text" class="form-control" id="movieTitle">
-                    </div>
-                    <div class="mb-3">
-                        <label for="movieYear" class="form-label">Año</label>
-                        <input type="number" class="form-control" id="movieYear">
-                    </div>
-                    <div class="mb-3">
-                        <label for="movieType" class="form-label">Tipo</label>
-                        <input type="text" class="form-control" id="movieType">
-                    </div>
-                    <div class="mb-3">
-                        <label for="moviePoster" class="form-label">Poster (URL)</label>
-                        <input type="text" class="form-control" id="moviePoster">
-                    </div>
-                    <div class="mb-3">
-                        <label for="movieEstado" class="form-label">Estado</label>
-                        <select class="form-control" id="movieEstado">
-                            <option value="1">Activo</option>
-                            <option value="0">Inactivo</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="movieDescription" class="form-label">Descripción</label>
-                        <textarea class="form-control" id="movieDescription"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="movieUbication" class="form-label">Ubicación</label>
-                        <input type="text" class="form-control" id="movieUbication">
-                    </div>
-                </form>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button class="btn btn-succes"
-                        id="boton"
-                >
-                </button>
+                <button class="btn btn-success" id="boton">Guardar</button>
             </div>
         </div>
     </div>

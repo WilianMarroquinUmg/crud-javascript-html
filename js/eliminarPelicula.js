@@ -11,6 +11,8 @@ function eliminarPelicula(imdbID) {
 
             getPeliculas();
 
+            alertPerzonalizado('success', 'La película ha sido eliminada correctamente')
+
         })
         .catch(error => {
             console.error('Error al eliminar la película:', error);
