@@ -28,6 +28,7 @@ function renderTable() {
 
     // Iteramos sobre los datos para crear filas en la tabla
     data.forEach(pelicula => {
+        console.log(pelicula)
         const row = document.createElement("tr");
 
         const idCell = document.createElement("td");
@@ -35,7 +36,7 @@ function renderTable() {
         row.appendChild(idCell);
 
         const titleCell = document.createElement("td");
-        titleCell.textContent = pelicula.title;
+        titleCell.textContent = pelicula.Title;
         row.appendChild(titleCell);
 
         const yearCell = document.createElement("td");

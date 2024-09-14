@@ -1,9 +1,7 @@
 
 function leventarModalGuardar(){
 
-    console.log('ejecutando metodo leventarModalGuardar')
-    const modal = new bootstrap.Modal(document.getElementById('editModal'));
-    modal.show();
+    abrirModal()
 
     const boton = document.getElementById('boton');
     boton.innerHTML = 'Guardar';
@@ -47,12 +45,13 @@ function guardarPelicula() {
         .then(data => {
             console.log(data)
             alert(data.message)
-            const modal = new bootstrap.Modal(document.getElementById('editModal'));
-            modal.hide();
+
+            cerrarModal()
+
+            getPeliculas();
 
         })
         .catch((error) => {
             console.error('Error:', error.Message)
         });
-
 }
